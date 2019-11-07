@@ -7,13 +7,12 @@ import VideoPlayer from '../components/VideoPlayer.js';
 //dispatchers with your VideoPlayer component props.
 
 let mapStateToProps = (state) => {
-  return {video: state.video};
+  return {video: state.currentVideo}; // The tests want us to name it currentVideo
 };
 
-let mapDispatchToProps = (dispatch) => {
-  return {
-    
-  }
-}
+var VideoPlayerContainer = connect(
+  mapStateToProps,
+  null
+)(VideoPlayer);
 
 export default VideoPlayerContainer;
